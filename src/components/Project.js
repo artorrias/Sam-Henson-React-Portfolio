@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
 
 function Project(props) {
-    const [image, setImage] = useState(props.image);
-    const [title, setTitle] = useState(props.title);
+    let image = props.image;
+    let title = props.title;
+    let link = props.link;
 
     return (
-        <div className='card'>
-            <img className='card-img-top' src={image}/>
+        <a className='card' href={link}>
+            <img className='card-img-top' src={image} alt="desc"/>
             <div className='card-body'>
                 <p className='card-text'>{title}</p>
             </div>
-        </div>
+        </a>
     );
 }
 

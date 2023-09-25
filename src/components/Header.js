@@ -1,7 +1,6 @@
 //require navigation
 import React, { useState } from 'react';
 import Navigation from './Navigation';
-import { act } from 'react-dom/test-utils';
 
 function Header() {
 
@@ -15,6 +14,10 @@ function Header() {
         setTab("Resume");
     };
 
+    const handleProjects = () => {
+        setTab("Projects");
+    };
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,9 +25,10 @@ function Header() {
                 <div className="navbar-nav">
                     <p className={activeTab==="About" ? "nav-item nav-link active" : "nav-item nav-link"} onClick={handleAbout}>About Me</p>
                     <p className={activeTab==="Resume" ? "nav-item nav-link active" : "nav-item nav-link"} onClick={handleResume}>Resume</p>
+                    <p className={activeTab==="Projects" ? "nav-item nav-link active" : "nav-item nav-link"} onClick={handleProjects}>Projects</p>
                 </div>
             </nav>
-            {activeTab === "About" ? <Navigation section="About"/> : <Navigation section="Resume"/>} 
+            {activeTab === "About" ? <Navigation section="About"/> : activeTab==="Resume" ? <Navigation section="Resume"/> : <Navigation section="Projects"/>} 
         </div>
     )
 }
