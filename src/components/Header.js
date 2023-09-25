@@ -1,32 +1,38 @@
 //require navigation
+import React, { useState } from 'react';
+import Navigation from './Navigation';
 
 function Header() {
+    let [category, setCategory] = useState('About');
 
-    const [nav, setNav] = useState('About');
-    const [resumeActive, setResumeActive] = useState('');
-
-    const handleClick = (e) => {
+    const clickHandler = (e) => {
         e.preventDefault();
-        const { target } = e;
-        const navType = target.navSection;
-        //set nav to specific
-        //render specific nav page?
 
-        if (navType === 'Resume') {
-            setNav(navType);
-            setResumeActive('active');
+        const { target } = e;
+        const navType = target.type;
+
+        if (navType != category) {
+            setCategory(navType);
         }
+
     };
 
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <p class="navbar-brand">Sam Henson</p>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <p class="nav-item nav-link active">About Me</p>
-                    <p class="nav-item nav-link">Resume</p>
+                <div>
+                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <p className="navbar-brand">Sam Henson</p>
+                        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div className="navbar-nav">
+                                <p className="nav-item nav-link active" onClick={clickHandler}>About</p>
+                                <p className="nav-item nav-link" onClick={clickHandler}>Resume</p>
+                            </div>
+                        </div>
+                    </nav>
+                    <Navigation 
+                        section={category}>
+                    </Navigation>
                 </div>
-            </div>
-        </nav>
-    )
-};
+    );
+}
+
+export default Header;
