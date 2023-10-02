@@ -18,6 +18,10 @@ function Header() {
         setTab("Projects");
     };
 
+    const handleContact = () => {
+        setTab("Contact");
+    };
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,9 +30,10 @@ function Header() {
                     <p className={activeTab==="About" ? "nav-item nav-link active" : "nav-item nav-link"} onClick={handleAbout}>About Me</p>
                     <p className={activeTab==="Resume" ? "nav-item nav-link active" : "nav-item nav-link"} onClick={handleResume}>Resume</p>
                     <p className={activeTab==="Projects" ? "nav-item nav-link active" : "nav-item nav-link"} onClick={handleProjects}>Projects</p>
+                    <p className={activeTab==="Contact Me" ? "nav-item nav-link active" : "nav-item nav-link"} onClick={handleContact}>Resume</p>
                 </div>
             </nav>
-            {activeTab === "About" ? <Navigation section="About"/> : activeTab==="Resume" ? <Navigation section="Resume"/> : <Navigation section="Projects"/>} 
+            {activeTab === "About" ? <Navigation section="About"/> : activeTab==="Resume" ? <Navigation section="Resume"/> : activeTab==="Contact" ? <Navigation section="Projects"/> : <Navigation section="Projects"/>} 
         </div>
     )
 }

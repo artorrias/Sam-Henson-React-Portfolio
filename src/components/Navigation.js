@@ -38,7 +38,9 @@ function Navigation(props) {
         {variable==="About" ?
             (
                 <div>
-                    <p>about</p>
+                    <img href="../../public/images/thumbnail_IMG_9551.jpeg"/>
+                    <p>My name is Sam Henson and I am a student in the University of Minnesota Bootcamp. I want to become a full-stack website developer and am working to hone my skills to better support me in the field. I enjoy playing video games both alone and with friends, and I also enjoy watching anime in my past time. I’m originally from Texas, but I love to travel and see new places that are different from where I grew up.</p>
+                    <p>I’ve worked in coffee shops for almost three years now and have met all sorts of different people in my time working in them. People’s differences have always intrigued me and captured my attention and it’s a big part of why I like to make friends. People’s differences both complement my weaknesses and enhance my own strengths. I am a big people person and encourage myself to branch out more for this reason!</p>
                 </div>
             )
         : variable==="Resume" ? (
@@ -46,10 +48,15 @@ function Navigation(props) {
                 <p>Resume</p>
             </div>
         )
-        : (
+        : variable==="Projects" ? (
             <div>
                 <p>Projects</p>
                 <div>{listItems}</div>
+            </div>
+        ) : (
+            <div>
+                <a href="https://github.com/artorrias">Github: @artorrias</a>
+                <p>Email: sam.henson1119@outlook.com</p>
             </div>
         )}
         <footer>
