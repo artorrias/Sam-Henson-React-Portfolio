@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/artorrias/static/css/main.31d6cfe0.css",
+    "main.js": "/artorrias/static/js/main.9262ad6f.js",
+    "index.html": "/artorrias/index.html",
+    "main.9262ad6f.js.map": "/artorrias/static/js/main.9262ad6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.9262ad6f.js"
+  ]
+}
