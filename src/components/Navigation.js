@@ -35,7 +35,7 @@ function Navigation(props) {
             title={obj.title}
             link={obj.link}
         ></Project>
-    ))
+    ));
 
 
     //function that checks the page and returns code depending on page
