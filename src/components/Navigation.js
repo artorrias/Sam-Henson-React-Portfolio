@@ -19,6 +19,12 @@ function Navigation(props) {
             title: "Simple Note Taker",
             link: "https://github.com/artorrias/Sams-Simple-Note-Maker",
             number: 2
+        },
+        {
+            image: "../../public/images/pet_schmeddit.png",
+            title: "Pet Schmeddit",
+            link: "https://github.com/elainefmartinez/Pets",
+            number: 3
         }
     ];
 
